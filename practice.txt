@@ -1,0 +1,19 @@
+spaCy features a rule-matching engine, the Matcher, that operates over tokens, similar to regular expressions.
+
+The rules can refer to token annotations (e.g. the token text or tag_, and flags (e.g. IS_PUNCT).
+
+The rule matcher also lets you pass in a custom callback to act on matches – for example, to merge entities and apply custom labels.
+
+You can also associate patterns with entity IDs, to allow some basic entity linking or disambiguation. To match large terminology lists, you can use the PhraseMatcher, which accepts Doc objects as match patterns.
+
+Compared to using regular expressions on raw text, spaCy’s rule-based matcher engines and components not only let you find you the words and phrases you’re looking for – they also give you access to the tokens within the document and their relationships.
+
+This means you can easily access and analyze the surrounding tokens, merge spans into single tokens or add entries to the named entities in doc.ents.
+
+my name is Biman Pal.
+
+My name is Abhay. Abhay am working with Infosys.
+
+My name is Shubham Mondal. Shubham working with Nihilent.
+
+My name is Sweta Kumari. Sweta is working in Nihilent. Sweta is in Multichoice project.
